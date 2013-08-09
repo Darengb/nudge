@@ -1,0 +1,493 @@
+@font-face {
+    font-family: 'ModernPictograms';
+    src: url('http://nudge.skim.me/views/type/modernpictogramspro_2-webfont.eot');
+    src: url('http://nudge.skim.me/views/type/modernpictogramspro_2-webfont.eot?#iefix') format('embedded-opentype'),
+        url('http://nudge.skim.me/views/type/modernpictogramspro_2-webfont.woff') format('woff'),
+        url('http://nudge.skim.me/views/type/modernpictogramspro_2-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family:  'HelveticaNeue';
+    src: url('http://nudge.skim.me/views/type/Helvetica Neue, HelveticaNeue-webfont.svg#Helvetica Neue, HelveticaNeue') format('svg');
+}
+#nudge {
+    font-family: Helvetica Neue, HelveticaNeue;
+    font-weight: 200;
+    display:block !important; /* element is display:none; inline so that nothing appears if the CSS stylesheet doesn't load (like on PDF files)*/
+}
+#nudge #nudgeline {
+    position : fixed;
+    top : 0;
+    left : 0;
+    z-index : 10000000000;
+}
+#nudge #logo {
+    height: 65px;
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    z-index:100;
+}
+#nudge .hrow {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: RGB(164,177,189);
+    height: 146px;
+}
+#nudge #nudgesettings {
+    font-family: ModernPictograms;
+    position: fixed;
+    top: 0px; 
+    left: 1px; 
+    background-color: #FFFFFF;
+    height: 15px; 
+    color: rgb(84, 89, 92);
+
+}
+#nudge.closed #nudgesettings {
+    z-index: 10000000000;
+
+}
+
+
+#nudge.open #nudgesettings {
+    height: 1000px;
+    width:100%;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 0;
+}
+#nudge.open #nudgeline {
+    /* top: 400px; */
+}
+#nudge .hrow .nheader {
+    position: absolute;
+    left: 277px;
+    color: white;
+    font-family: Helvetica Neue, HelveticaNeue;
+    font-weight: 200;
+    font-size: 20px;
+    top: 54px;
+}
+#nudge .category  {
+    cursor: move;
+    border-radius: 10px;
+    padding: 2px 6px;
+    margin: 0px 0px 17px;
+    display: block;
+    background: transparent;
+    font-family: Helvetica Neue, HelveticaNeue;
+    font-weight: 500;
+    font-size: 14px;
+    width: 162px;
+    z-index: 1000000000000000000;
+
+}
+#nudge .category div {
+    font-family: ModernPictograms;
+    font-size: 22px;
+    margin-right: 6px;
+    color: inherit;
+    opacity: .7;
+    position: relative;
+    top: 1px;
+    display:inline;
+}
+#nudge .text1 {
+    text-transform: uppercase;
+
+}
+#nudge .text2 {
+    display: block;
+    font-weight: normal;
+    font-style: italic;
+    position: relative;
+}
+#nudge .catbox {
+    top: 0;
+    padding: 22px 0;
+    left: 80px;
+    width: 95%;
+    text-align: left;
+    position: relative;
+    -webkit-column-width: 150px;
+    color: rgb(148, 160, 171);
+}
+#nudge .ngroup {
+    position: relative;
+    min-height: 200px;
+}
+#nudge .ngroup:nth-child(3n){
+    color: RGB(35,214,229);
+}
+#nudge .ngroup:nth-child(3n) .nheader{
+    background: RGB(18,224,238);
+}
+#nudge .ngroup:nth-child(3n +1){
+    color: RGB(253,33,138);
+}
+#nudge .ngroup:nth-child(3n +1) .nheader{
+    background: RGB(253,33,138);
+}
+#nudge .ngroup:nth-child(3n +2){
+    color: RGB(70,216,167);
+}
+#nudge .ngroup:nth-child(3n +2) .nheader{
+    background: RGB(70,216,167);
+}
+#nudge .ngroup .delete {
+    font-family: ModernPictograms;
+    color: white;
+    font-size: 36px;
+    right: 42px;
+    position: absolute;
+    top: 6px;
+    cursor: pointer;
+}
+#nudge .ngroup .nheader {
+    background: rgb(164, 177, 189);
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 49px;
+    font-family: Helvetica Neue, HelveticaNeue;
+    font-weight: 100;
+}
+#nudge .ngroup .nheader .text1 {
+    position: relative;
+    top: 10px;
+    font-weight: lighter;
+    left: 23px;
+    font-size: 26px;
+    font-family: Helvetica Neue, HelveticaNeue;
+    color:white;
+    letter-spacing: 1px;
+}
+#nudge .minutes {
+    position: absolute;
+    left: 347px;
+    top: 16px;
+    font-weight: 400;
+    font-family: Gill Sans;
+    color: inherit;
+    font-size: 14px;
+    z-index:100;
+}
+#nudge .minutes2 {
+    position: absolute;
+    font-weight: 400;
+    font-family: Gill Sans;
+    color: inherit;
+    font-size: 14px;
+    z-index: 100;
+    top: 16px;
+    left: 420px;
+    letter-spacing: 1px;
+    color: white;
+}
+#nudge .minutes3 {
+    position: absolute;
+    font-weight: 400;
+    font-family: Gill Sans;
+    color: inherit;
+    font-size: 14px;
+    z-index: 100;
+    top: 16px;
+    left: 225px;
+    letter-spacing: 1px;
+    color: white;
+}
+#nudge .ngroup input#max {
+    border-radius: 0;
+    border: 0;
+    position: absolute;
+    top: 11px;
+    left: 274px;
+    height: 28px;
+    width: 134px;
+    padding: 0 0 0 12px;
+    font-family: Gill Sans;
+    font-weight: 700;
+    font-size: 14px;
+    color: inherit;
+}
+
+#nudge #nudgesettings {
+    color: RGB(114,119,122);
+    font-family: Helvetica Neue, HelveticaNeue, sans-serif;
+    text-align: left;
+    background: transparent;
+}
+#nudge.open #nudgesettings {
+    height: 100%;
+    background: white;
+}
+#nudge #nudgesettings .ngroup .categories {
+    top: 0px;
+    padding: 22px 0px;
+    left: 80px;
+    width: 95%;
+    text-align: left;
+    position: relative;
+    -webkit-column-width: 150px;
+}
+#nudge .ngroup .marrows {
+    font-family: ModernPictograms;
+    position: absolute;
+    height: auto;
+    top: 105px;
+    display: block;
+    left: 22px;
+    font-size: 36px;
+}
+#nudge .catbox .marrows {
+    font-family: ModernPictograms;
+    position: absolute;
+    height: auto;
+    top: 64px;
+    display: block;
+    left: -50px;
+    font-size: 36px;
+}
+#nudge span.gear {
+    font-family: ModernPictograms;
+    font-size: 17px;
+    /*left: 5px;
+    position: absolute; */
+    position: relative;
+    color: rgb(91,99,105);
+    opacity: 0.8;
+    left: 1px;
+    top: 1px;
+    cursor: pointer;
+}
+#nudge img.gear {
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    opacity: 0.9;
+}
+
+#nudge #groupname {
+    position: relative;
+    top: 0px;
+    background: rgba(255,255,255,0.9);
+    padding: 3px 8px 2px 22px;
+    border-radius: 0 0 5px 0;
+    left: -1px;
+    font-size: 12px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family:  Helvetica Neue, HelveticaNeue;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: black;
+}
+
+#nudge .addsite {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    color: RGB(148,160,171);
+}
+#nudge .ngroup.newgroup {
+    min-height: auto;
+}
+#nudge .ngroup.newgroup .nheader .addgroup {
+    color:inherit;
+    left: 119px;
+    top: 5px;
+}
+#nudge .addsite, #nudge .ngroup.newgroup .nheader .addgroup {
+    margin: 0;
+    border-radius: 0;
+    background: white;
+    font-family: Gill Sans;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    border: 0;
+    height: 25;
+    width: 134;
+    padding: 2px 0 1px 1px;
+}
+#nudge .addsite span span, #nudge .ngroup.newgroup .nheader .addgroup span span {
+    position: absolute;
+    right: 8px;
+    font-weight: 700;
+    font-size: 17px;
+    top: 4px;
+}
+#nudge #close {
+    position: absolute;
+    left: 571px;
+    top: 42px;
+    font-size: 11px;
+    cursor: pointer;
+}
+#nudge #close b {
+    color: RGB(21,223,228);
+}
+
+#nudge .swlogo {
+    position: absolute;
+    right: 45px;
+    bottom: 0;
+    opacity: 0.9;
+    height: 29px;
+}
+
+#nudge #warning {
+    position: fixed;
+    top: 0;
+    z-index: 1000000000000000000000;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+#nudge #warning img {
+    min-width: 100%;
+    min-height: 100%;
+}
+#nudge #wbuttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    cursor: pointer;
+}
+#nudge #wbuttons #done {
+    width: 100%;
+    background-color: rgba(255,255,255,0.8);
+    height: 50%;
+    text-align: center;
+    color: RGB(13,25,30);
+}
+#nudge #wbuttons #snooze{
+    width: 50%;
+    background-color: rgba(13,25,30,0.8);
+    height: 50%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+}
+#nudge #wbuttons #disable {
+    width: 50%;
+    background-color: rgba(13,25,30,0.8);
+    height: 50%;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: white;
+    border-left: 2px solid rgba(250,250,250,0.8);
+
+}
+#nudge #wbuttons span {
+    top: 8px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+#nudge .motivationbtn {
+    position: absolute;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    top: 97px;
+    left: 441px;
+    font-style: normal;
+    cursor: pointer;    
+}
+#nudge .motivationbtn .text2 {
+    font-size: 14px;
+    font-family: Gill Sans;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-weight: 400;
+    display: inherit;
+    width: auto;
+    float: left;
+    position: relative;
+    text-transform: lowercase;
+    top: 2px;
+}
+.ui-dialog[aria-describedby=motivationdialog] {
+    width: auto !important;
+}
+.ui-dialog[aria-describedby=motivationdialog] .ui-dialog-titlebar {
+    background: rgb(18, 224, 238) !important;
+}
+.ui-dialog[aria-describedby=motivationdialog] .ui-button.ui-widget {
+    background: rgb(70, 216, 167) !important;
+}
+#motivationdialog {
+    height: auto !Important;
+}
+
+#motivationdialog .ui-button:not(.ui-widget) {
+    margin: 0 0 20px 0 !important;
+    background: rgb(91, 99, 105) !important;
+}
+#motivationdialog .ui-button:not(.ui-widget):hover {
+    opacity: 0.75;
+}
+#motivationdialog .ui-button.selected {
+    background:  rgb(253, 33, 138) !important;
+}
+#motivationdialog .ui-button:not(.ui-widget) .ui-button-text {
+    width: 344px;
+    text-align:left;        
+}
+#motivationdialog .col1 {
+    float: left;
+    width: 400px;
+    margin: 45px 25px 0 30px;
+}
+#motivationdialog .col1 .text2 {
+    font-size: 22px !important;
+    font-weight: 100;
+    color: rgb(91,99,105);
+    position: absolute;
+    top: 22px;
+}
+#motivationdialog .col2 {
+    float: left;
+    margin: 45px 25px 0 0;
+}
+#motivationdialog .col2 img {
+    width: 430px;
+}
+#motivationdialog .col2 .text2 {
+    font-size: 26px;
+    font-weight: 100;
+    color: rgb(91,99,105);
+    top: 16px;
+    position: relative;
+}
+#motivationdialog .col2 .text1 {
+    font-size: 26px;
+    position: relative;
+    width: 430px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(253, 33, 138);
+    top: 23px;
+}
+#motivationdialog .col2 .text3 {
+    font-weight: 100;
+    color: rgb(91,99,105);
+    position: relative;
+    width: 430px;
+    font-style: italic;
+    font-size: 20px;
+    top: 32px;
+}
